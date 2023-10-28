@@ -34,9 +34,6 @@ export default function App() {
 
     useEffect(() => {
 
-        console.log(makeStringToList(getStringFromLocalStorage()))
-        console.log(streamerList.length)
-
         let streamersFromApi = []
         let nameList = makeStringToList(getStringFromLocalStorage())
 
@@ -45,10 +42,8 @@ export default function App() {
 
                 for (let x of nameList) {
                     getStreamer(e, x).then((e) => {
-                        console.log(e)
                         streamersFromApi.push(e)
                     }).then(() => {
-                        console.log(streamersFromApi.length)
                         if (streamersFromApi.length === nameList.length) setStreamerList(streamersFromApi)
                     })
                 }
