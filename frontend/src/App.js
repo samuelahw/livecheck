@@ -2,6 +2,7 @@ import './App.css';
 import NavbarComponent from './components/navbar/Navbar';
 import LiveList from './components/list/LiveList';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 

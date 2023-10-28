@@ -34,24 +34,24 @@ export default function App() {
 
     useEffect(() => {
 
-        let streamersFromApi = []
-        let nameList = makeStringToList(getStringFromLocalStorage())
+        // let streamersFromApi = []
+        // let nameList = makeStringToList(getStringFromLocalStorage())
 
-        if (getStringFromLocalStorage() !== null && streamerList.length === 0) {
-            getAccess().then((e) => {
+        // if (getStringFromLocalStorage() !== null && streamerList.length === 0) {
+        //     getAccess().then((e) => {
 
-                for (let x of nameList) {
-                    getStreamer(e, x).then((e) => {
-                        streamersFromApi.push(e)
-                    }).then(() => {
-                        if (streamersFromApi.length === nameList.length) setStreamerList(streamersFromApi)
-                    })
-                }
+        //         for (let x of nameList) {
+        //             getStreamer(e, x).then((e) => {
+        //                 streamersFromApi.push(e)
+        //             }).then(() => {
+        //                 if (streamersFromApi.length === nameList.length) setStreamerList(streamersFromApi)
+        //             })
+        //         }
 
-            })
-        } else {
-            setStreamerList(streamerList);
-        }
+        //     })
+        // } else {
+        //     setStreamerList(streamerList);
+        // }
     }, [update])
 
     return (

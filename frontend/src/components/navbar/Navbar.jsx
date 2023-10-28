@@ -1,14 +1,20 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavbarComponent() {
     return (
-        <nav className="bg-gradient-to-t from-blue-800 via-indigo-700 to-gray-700 p-7">
-            <div className="container mx-auto">
-                <div className="flex justify-between items-center">
-                    <img className='object-scale-down w-40' src='/images/livechecklogo1.png' alt="Live Check"></img>
-                </div>
-            </div>
-        </nav>
+        <Navbar expand="lg" className="bg-primary bg-gradient" >
+            <Container>
+                <Navbar.Brand >
+                    <img height="40" className="w-40 object-fit-sm-contain" src='/images/livechecklogo1.png' alt="Live Check"></img>
+                </Navbar.Brand>
+                <Navbar.Collapse id="basic-navbar-nav">
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
 
